@@ -23,6 +23,7 @@ import {updateRegistrationFlag} from './mutation.chef.updateRegistration';
 import {updateScreensGQLTAG} from './mutation.chef.updateScreens';
 import {updateIsEmailVerifiedYnGQLTAG} from './mutation.chef.updateIsEmailVerifiedYn';
 import {updateIsMobileNoVerifiedYnGQLTAG} from './mutation.chef.updateIsMobileNoVerifiedYn';
+import {updateChefPriceCalculatorGQLTAG} from './mutation.chef.updateChefPriceCalculator';
 
 export {
   saveIntroTourGQLTAG,
@@ -49,5 +50,6 @@ export {
   updateRegistrationFlag,
   updateScreensGQLTAG,
   updateIsEmailVerifiedYnGQLTAG,
-  updateIsMobileNoVerifiedYnGQLTAG
+  updateIsMobileNoVerifiedYnGQLTAG,
+  updateChefPriceCalculatorGQLTAG
 };
