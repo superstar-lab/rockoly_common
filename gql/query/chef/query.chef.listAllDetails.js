@@ -7,6 +7,7 @@ export const listAllDetailsGQLTAG = `query listAllDetails($chefId: String!, $dat
     totalEarnings
     totalReviewCount
     outstandingRequests: chefBookingHistoriesByChefId(
+      orderBy: CREATED_AT_DESC
       filter: { chefBookingStatusId: { in: ["CUSTOMER_REQUESTED"] } }
     ) {
       nodes {
@@ -26,6 +27,7 @@ export const listAllDetailsGQLTAG = `query listAllDetails($chefId: String!, $dat
       }
     }
     futureReservations: chefBookingHistoriesByChefId(
+      orderBy: CREATED_AT_DESC
       filter: {
         chefBookingStatusId: { in: ["CHEF_ACCEPTED"] }
         chefBookingFromTime: { gte: $dateTime }
@@ -48,6 +50,7 @@ export const listAllDetailsGQLTAG = `query listAllDetails($chefId: String!, $dat
       }
     }
     reviews: chefBookingHistoriesByChefId(
+      orderBy: CREATED_AT_DESC
       filter: {
         chefBookingStatusId: { in: ["COMPLETED"] }
         isChefReviewedYn: { eq: false }
