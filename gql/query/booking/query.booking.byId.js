@@ -99,6 +99,7 @@ export const byIdGQLTAG = `query chefBookingHistoryByChefBookingHistId($chefBook
     }
     chefProfileByChefId {
       chefId
+      userId
       fullName
       chefPicId
       defaultStripeUserId
@@ -122,6 +123,7 @@ export const byIdGQLTAG = `query chefBookingHistoryByChefBookingHistId($chefBook
     }
     customerProfileByCustomerId {
       customerId
+      userId
       fullName
       customerPicId
       averageRating
